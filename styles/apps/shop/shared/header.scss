@@ -8,6 +8,19 @@ header {
 
   .search {
     padding-top: 25px;
+    position: relative;
+    ul{
+      position: absolute;
+      background: #fff;
+      list-style: none;
+      padding: 1rem;
+      width: 95%;
+      border-radius: 15px;
+      z-index: 2;  
+      li{
+        margin: 0.5rem 0;
+      }
+    }
   }
 
   .navigation {

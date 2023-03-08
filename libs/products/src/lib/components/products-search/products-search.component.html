@@ -6,5 +6,18 @@
     class="products-search-input"
     name="search"
     id="search"
+    (keyup)="showFIlter()"
+    [(ngModel)]="searchText" #searchbar
   />
 </div>
+
+<ul *ngIf="filter">
+  <li *ngFor="let item of list | filter: searchText">
+  <a (click)="closeFilter()" [routerLink]="'/products/' + item.id">{{item.brand}} - {{item.name}} - {{item.category ? item.category.name : ''}}</a>
+  </li>
+  <li *ngIf="(list | filter: searchText).length === 0">
+    <mat-icon mat-list-avatar>error</mat-icon>
+    <div mat-line>0 results</div>
+    <div mat-line>No matching presidents</div>
+  </li>
+</ul>

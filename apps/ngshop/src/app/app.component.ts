@@ -6,10 +6,10 @@ import { UsersService } from '@bluebits/users';
   templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
+  title = 'ngshop';
   constructor(private usersService: UsersService) {}
 
   ngOnInit() {
     this.usersService.initAppSession();
   }
-  title = 'ngshop';
 }

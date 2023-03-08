@@ -5,8 +5,7 @@
     </div>
     <div class="p-col-6 product">
       <h2 class="product-name">{{ product.name }}</h2>
-      <p class="product-desc">
-        {{ product.description }}
+      <p class="product-desc" [innerHTML]="product.description">
       </p>
       <div class="product-rating">
         <p-rating [(ngModel)]="product.rating" [cancel]="false" [disabled]="true"></p-rating>

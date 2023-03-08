@@ -33,8 +33,11 @@
                 >Password is required
               </small>
             </div>
-            <div class="p-col-12">
+            <div class="p-col-6">
               <p-button label="Submit" styleClass="full-btn" (onClick)="onSubmit()"></p-button>
+            </div>
+            <div class="p-col-6">
+              <p-button label="register" styleClass="full-btn" routerLink="/register"></p-button>
             </div>
             <div class="p-col-12" *ngIf="isSubmitted && authError">
               <small class="p-error">{{ authMessage }}</small>
