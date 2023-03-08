@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthGuardAdmin } from '@bluebits/users';
+import { AuthGuardAdminGuard } from '@bluebits/users';
 import { CategoriesFormComponent } from './pages/categories/categories-form/categories-form.component';
 import { CategoriesListComponent } from './pages/categories/categories-list/categories-list.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
@@ -16,7 +16,7 @@ const routes: Routes = [
   {
     path: '',
     component: ShellComponent,
-    canActivate: [AuthGuardAdmin],
+    canActivate: [AuthGuardAdminGuard],
     children: [
       {
         path: '',
